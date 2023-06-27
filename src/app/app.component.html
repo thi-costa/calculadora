@@ -90,10 +90,11 @@
         </div> -->
         <tecla valor="0" (clicar)="acionarTecla($event)"></tecla>
 
+        <tecla valor="." (clicar)="acionarTecla($event)"></tecla>
+
         <!-- <div class="tecla">
           <span class="operacao">&#61;</span>
         </div> -->
-        <tecla valor="&#61;" (clicar)="confirmarOperacao()"></tecla>
 
         <!-- <div class="tecla">
           <span class="operacao">&minus;</span>
@@ -110,6 +111,7 @@
         <span style="color: red;" *ngIf="historico.ocorreuErro"> (Operação inválida!)</span>
         <br>
       </span>
+      <tecla rotulo="Del" valor="-" (clicar)="acionarTecla($event)"></tecla>
     </div>
 
   </body>
