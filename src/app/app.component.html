@@ -91,6 +91,9 @@
         <tecla valor="0" (clicar)="acionarTecla($event)"></tecla>
 
         <tecla valor="." (clicar)="acionarTecla($event)"></tecla>
+        
+        <tecla valor="&#61;" (clicar)="confirmarOperacao()"></tecla>
+
 
         <!-- <div class="tecla">
           <span class="operacao">&#61;</span>
@@ -108,10 +111,12 @@
     <div>
       <span *ngFor="let historico of historicoOperacoes">
         {{historico.operacao}}
+        
         <span style="color: red;" *ngIf="historico.ocorreuErro"> (Operação inválida!)</span>
+        <tecla rotulo="Del" valor="-" (clicar)="limparHistoricoId(historico.id)"></tecla>
         <br>
       </span>
-      <tecla rotulo="Del" valor="-" (clicar)="acionarTecla($event)"></tecla>
+      <!-- <tecla rotulo="Del" valor="-" (clicar)="limparLinhaHistorico()"></tecla> -->
     </div>
 
   </body>

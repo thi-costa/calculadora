@@ -4,4 +4,5 @@ export class Historico {
     dataCriacao: Date;
     dataAlteracao?: Date;
     ocorreuErro?: boolean = false;
+    id: number;
 }
